@@ -1,0 +1,250 @@
+/* Font Awesome Library Icon stylesheet */
+@import url(all.min.css);
+/* Bootstrap stylesheet */
+@import url(bootstrap.min.css);
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* ========== General Styles ========== */
+:root {
+    /* Colors */
+    --white: 255, 255, 255;
+    --black: 0, 0, 0;
+
+    --black-111: 17, 17, 17;
+    --Indian-Red: 214, 46, 51;
+    --light-gray: 204, 204, 204;
+    --dark-gray: 33, 37, 41;
+    --gray-444: 68, 68, 68;
+    --gray-777: 119, 119, 119;
+    --gray-999: 153, 153, 153;
+    
+    /* Colors' roles */
+    --color-main: rgba(var(--black-111), var(--opacity));
+    --color-sub: rgba(var(--light-gray), var(--opacity));
+    --color-accent: rgba(var(--Indian-Red), var(--opacity-60));
+
+    --text-main: rgba(var(--white), var(--opacity));
+    --text-sub-dark: rgba(var(--dark-gray), var(--opacity));
+    --text-sub-777: rgba(var(--gray-777), var(--opacity));
+    --text-sub-999: rgba(var(--gray-999), var(--opacity));
+    --text-accent: rgba(var(--Indian-Red), var(--opacity));
+    --text-title: rgba(var(--gray-444), var(--opacity));
+
+    --text-body: var(var(--text-sub-dark));
+
+    /* Opacity */
+    --opacity: 1;
+    --opacity-60: 0.6;
+
+    /* Fonts */
+    --font-general: "Roboto", sans-serif;
+    --line-height-head: 1.2; /* by default for headers */
+    --line-height-body: 1.5; /* by default for the body */
+    --line-height-sub: 26px;
+
+    /* Animation options */
+    --animation-duration: 0.5s; 
+}
+
+/* ========== Override Styles ========== */
+body {
+    font-family: var(--font-general);
+    color: var(--text-body);
+}
+h1, h2, h3, h4, h5, h6, p, small, a {
+    word-break: break-word;
+    text-wrap: wrap;
+}
+
+/* ========== Costumized Styles ========== */
+.bg-main {background-color: var(--color-main);}
+.bg-sub {background-color: var(--color-sub);}
+.bg-accent {background-color: var(--color-accent);}
+
+.text-main {color: var(--text-main);}
+.text-sub-dark {color: var(--text-sub-dark);}
+.text-sub-777 {color: var(--text-sub-777);}
+.text-sub-999 {color: var(--text-sub-999);}
+.text-accent {color: var(--text-accent);}
+.text-title {color: var(--text-title);}
+
+.font-general {font-family: var(--font-general);}
+
+.fs-18px {font-size: 1.125rem;}
+.fs-25px {font-size: calc(3.125rem / 2);}
+.fs-28px {font-size: 1.75rem;}
+.fs-30px {font-size: 1.875rem;}
+.fs-60px {font-size: 3.75rem;}
+
+.fw-black {font-weight: 900;}
+
+.w-fit {width: fit-content;}
+
+.me-20px {margin-right: 1.25rem;}
+.mt-20px {margin-top: 1.25rem;}
+.mt-50px {margin-top: 3.125rem;}
+.mb-20px {margin-bottom: 1.25rem;}
+.mb-35px {margin-bottom: calc(4.375rem / 2);}
+.my-100px {margin-top: 6.25rem; margin-bottom: 6.25rem;}
+.pt-200px {padding-top: calc(12.5rem + 1rem);}
+.p-10px {padding: 0.625rem;}
+.p-50px {padding: 3.125rem;}
+.p-100px {padding: 6.25rem;}
+.py-100px {padding-top: 6.25rem; padding-bottom: 6.25rem;}
+
+.sticky-left {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.clear-fix {clear: both;}
+
+.btn.btn-accent {
+    --color: var(--text-accent);
+
+    --bs-btn-color: var(--text-main);
+    --bs-btn-bg: var(--color);
+    --bs-btn-hover-color: var(--text-main);
+    --bs-btn-hover-bg: var(--color);
+    --bs-btn-active-color: var(--text-main);
+    --bs-btn-active-bg: var(--color);
+    --px: 20px;
+    --py: 10px;
+
+    padding: var(--py) var(--px);
+}
+
+.social-list i {
+    --bg-color: transparent;
+    --color: var(--text-sub-777);
+    --width: 2.5rem;
+    --height: 2.5rem;
+    --border: solid;
+    --thickness: 1px;
+    --border-color: var(--text-sub-999);
+    --mb: 0.625rem;
+    --me: 0.625rem;
+
+    background-color: var(--bg-color);
+    color: var(--color);
+    width: var(--width);
+    height: var(--height);
+    line-height: 42px;
+    border: var(--thickness) var(--border) var(--border-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: var(--me);
+    margin-bottom: var(--mb);
+    transition: var(--animation-duration);
+}
+.social-list i:hover{
+    --color: #fff;
+    --bg-color: var(--text-accent);
+    --border: none;
+}
+
+.bg-img {
+    --img-url: url('');
+
+    background-image: linear-gradient(to right,  var(--color-accent), var(--color-accent))
+                    , var(--img-url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* ========== Header Section ========== */
+header .offcanvas {
+    --bs-offcanvas-width: 250px;
+    --bs-offcanvas-bg: rgba(var(--black-111), var(--opacity));
+    --bs-offcanvas-border-width: 0;
+    --bs-offcanvas-border-radius: none;
+    --bs-offcanvas-header-border-width: 0;
+    --bs-offcanvas-header-padding: 1.25rem 2rem;
+    --bs-offcanvas-padding-x: 2rem;
+    --bs-offcanvas-margin: 0;
+
+    min-width: 250px;
+}
+header .nav-link {
+    --bs-nav-link-font-size: calc(3.125rem / 2);
+    --bs-nav-link-color: rgba(var(--white), var(--opacity));
+    --bs-nav-link-hover-color: var(--text-accent);
+    --bs-nav-link-padding-y: 1.25rem;
+}
+header .btn-close:focus {--bs-btn-close-focus-shadow: 0;}
+header .btn-close {
+    --bs-btn-close-bg: none;
+
+    color: var(--text-main);
+}
+header .btn-close:hover {color: var(--text-accent)}
+
+/* ========== Hero Section ========== */
+#hero {height: 660px;}
+#hero.bg-img {--img-url: url('../img/events-heavenly-header.jpg');}
+#hero .btn:active {--bs-btn-active-border-color: transparent;}
+#hero * {
+    position: relative;
+}
+
+/* ========== Details Section ========== */
+#details .singer>h3 {
+    color: var(--text-main);
+    background-color: var(--color-accent);
+    font-size: 1.75rem;
+    padding: 0.625rem;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+#details .singer>p {
+    color: var(--text-sub-dark);
+    background-color: var(--color-sub);
+    padding: 0.625rem;
+    margin-bottom: 0;
+}
+#details .singer:not(.first)>p {display: none;}
+
+/* ========== Duration Section ========== */
+#duration.bg-img {--img-url: url('../img/invitation-2508607__340.jpg');}
+#duration .time {
+    padding: 3.125rem;
+    border: 1px solid var(--text-main);
+}
+
+ /* ========== Cpaontact Section ========== */
+#contact h2, #contact h3 {color: var(--text-title);}
+#contact p {color: var(--text-sub-777);}
+#contact .form-control {
+    color: var(--text-sub-777);
+    border-radius: 0;
+    margin-bottom: 1.25rem;
+}
+
+
+
+/* ========== Media Query ========== */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .social-list i {--mb: 0;}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .w-md-75 {width: 75%;}
+}
+
+/* Large devices (Screens, 992px and up) */
+@media (min-width: 992px) {
+    .w-lg-50 {width: 50%;}
+}
+
+/* Extra Large devices (Screens, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
